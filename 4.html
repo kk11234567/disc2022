@@ -1,7 +1,15 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <style>
-    #add-btn { background : orange }
+	<meta charset="UTF-8">
+	<title>í• ì¼ ëª©ë¡ ì•±</title>
+	<style>
+		#add-btn{
+			padding: 5px 10px
+			border: 0
+			background: #f80; color: white
+			border-radius: 5px
+		}
 		ul{ 
 			padding: 0
 			list-style-position: inside
@@ -10,19 +18,50 @@
 			border-bottom: 1px solid #999
 			padding: 5px 0
 		}
-		.active{ background: #abc}
-  </style></head>
+		.active{ background: orange }
+	</style>
+</head>
 <body>
-  <h1>¹öÆ°À» ´­·¯¼­ °ªÀ» Ãß°¡ÇÏ¼¼¿ä</h1><br>
-  <button id='bt'>¹öÆ°</button>
-  <ul id = 'list'>
-  <li></li></ul>
+	
+	<h1 id='title'>ë²„íŠ¼ì„ ëˆŒëŸ¬ ê°’ì„ ì¶”ê°€í•˜ì„¸ìš”</h1>
+	<button id="add-btn">ë²„íŠ¼</button>
+	<ul id='list'>
+		<li></li>
+	</ul>
+
 <script>
-  var list = document.getElementById('list');
-  var li = list.getElementsByTagName('li')
-  var bt = document.getElementById('bt')
-  bt.addEventListener('click', function() {
-    var txt = prompt("Ãß°¡ÇÒ °ª ÀÔ·Â")
-    list.innerHTML +=  '<li>' + txt + '</li>'
-  })
-</script></body></html>
+
+	var title = document.getElementById('title')
+	var list = document.getElementById('list')
+	var li = list.getElementsByTagName('li')
+	var addBtn = document.getElementById('add-btn')
+	var listCounter = 1
+
+	for(var i = 0; i < li.length; i++){
+		li[i].addEventListener('click', activeItem)
+	}
+
+	function activeItem(){
+
+
+		for(var i = 0; i < li.length; i++){
+			li[i].removeAttribute('class')
+		}
+
+		this.setAttribute('class', 'active')
+	}
+
+	addBtn.addEventListener('click', function(){
+		var txt = prompt('ì…ë ¥')
+		list.innerHTML += '<li>' + txt + '</li>'
+		
+		for(var i = 0; i < li.length; i++){
+		li[i].addEventListener('click', activeItem)
+	}
+	})
+
+
+</script>	
+
+</body>
+</html>
