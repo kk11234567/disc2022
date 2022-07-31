@@ -1,0 +1,28 @@
+<html>
+<head>
+  <style>
+    #add-btn { background : orange }
+		ul{ 
+			padding: 0
+			list-style-position: inside
+		}
+		li{
+			border-bottom: 1px solid #999
+			padding: 5px 0
+		}
+		.active{ background: #abc}
+  </style></head>
+<body>
+  <h1>버튼을 눌러서 값을 추가하세요</h1><br>
+  <button id='bt'>버튼</button>
+  <ul id = 'list'>
+  <li></li></ul>
+<script>
+  var list = document.getElementById('list');
+  var li = list.getElementsByTagName('li')
+  var bt = document.getElementById('bt')
+  bt.addEventListener('click', function() {
+    var txt = prompt("추가할 값 입력")
+    list.innerHTML +=  '<li>' + txt + '</li>'
+  })
+</script></body></html>
