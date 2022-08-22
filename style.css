@@ -90,17 +90,59 @@ body{
   font-size: 25px;
   color: white;
   float: left;
-  margin: 0 20 20 80;
+  margin: 0 20 20 75;
   vertical-align: middle;
+}
+.page1_video_title{
+  clear:left;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 20px;
+  color: white;
+  margin: 0 0 0 75;
+}
+.page1_body2_title{
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 20px;
+  color: white;
+  margin: 0 0 0 75;
 }
 .page1_body2{
   clear: both;
   width: 1500px;
-  height: 500px;
-  margin: 0 20 0 80;
+  height: 1000px;
+  margin: 0 20 20 75;
   background-color: #D8E7EF;
+  position:absolute;
 }
-
+.page1_body2_lectureintro{
+  position: absolute;
+  top: 1180;
+  left: 140;
+  color: #1B52A2;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 17px;
+}
+.page1_body2_lecture{
+  position: relative;
+  top: 120;
+  text-align: center;
+}
+.page1_body2_lecturelist{
+  position: absolute;
+  top: 1480;
+  left: 140;
+  color: #1B52A2;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 17px;
+}
+.page1_body2_lecture_choice{
+  position: absolute;
+  top: 1680;
+  left: 140;
+  color: #1B52A2;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 14px;
+}
 /*진로방향페이지*/
 .list th{
   font-family: 'Do Hyeon', sans-serif;
