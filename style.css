@@ -109,7 +109,7 @@ body{
 .page1_body2{
   clear: both;
   width: 1500px;
-  height: 1000px;
+  height: 2100px;
   margin: 0 20 20 75;
   background-color: #D8E7EF;
   position:absolute;
@@ -137,11 +137,12 @@ body{
 }
 .page1_body2_lecture_choice{
   position: absolute;
-  top: 1680;
+  top: 1580;
   left: 140;
+  right: 140;
   color: #1B52A2;
   font-family: 'Do Hyeon', sans-serif;
-  font-size: 14px;
+  font-size: 10px;
 }
 /*진로방향페이지*/
 .list th{
