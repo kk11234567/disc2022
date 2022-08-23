@@ -25,12 +25,35 @@
   <div class="title">
     <h1>------------------------------ 신소재 NEWS ------------------------------</h1>
   </div>
-  <div class="box">
-     <table>
-       <tr>
-         <td><a href="http://www.apparelnews.co.kr/news/news_view/?idx=199860"><img alt="섬유 업체, 하반기 친환경 소재에 올인" src="https://kk11234567.github.io/disc2022/news1.jpg"></td></a>
-         <td><a href="https://www.hankyung.com/it/article/202208182422i"><img alt="날씨 따라 색깔 변하며 전기 저장하는 '스마트 윈도' 나온다" src="https://kk11234567.github.io/disc2022/news2.jpg"></td></a>
-         <td><a href="http://www.aitimes.com/news/articleView.html?idxno=140256"><img alt="KAIST 연구팀 '신소재 분야 AI 활용 가능성 열었다'" src="https://kk11234567.github.io/disc2022/news3.jpg"></td></a>
-       </tr>
-     </table>
+  <div style="overflow: hidden">
+    <div class="container">
+      <div class="news_image">
+        <img src="https://kk11234567.github.io/disc2022/news1.jpg">
+      </div>
+      <div class="news_image">
+        <img src="https://kk11234567.github.io/disc2022/news2.jpg">
+      </div>
+      <div class="news_image">
+        <img src="https://kk11234567.github.io/disc2022/news3.jpg">
+      </div>
+    </div>
+  </div>
+  <div class="btn">
+    <button class="button1" style=" display: inline-block;">1</button>
+    <button class="button2" style=" display: inline-block;">2</button>
+    <button class="button3" style=" display: inline-block;">3</button>
+  </div>
+<script>
+
+document.querySelector('.button1').addEventListener('click', function(){
+    document.querySelector('.container').style.transform = 'translate(0vw)';
+  });
+document.querySelector('.button2').addEventListener('click', function(){
+    document.querySelector('.container').style.transform = 'translate(-100vw)';
+  });
+document.querySelector('.button3').addEventListener('click', function(){
+    document.querySelector('.container').style.transform = 'translate(-200vw)';
+  });
+
+</script>
 </body></html>
