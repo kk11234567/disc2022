@@ -22,9 +22,6 @@
 				<h1>반도체</h1>
 			</div>
 			<div class="page3">
-				<h1>에너지</h1>
-			</div>
-			<div class="page3">
 				<h1>철강</h1>
 			</div>
 			<div class="page3">
@@ -54,7 +51,6 @@ var hammer = new Hammer(page3_wrapper);
 function init_page3(){
 	w = page3[0].offsetWidth;
 
-
 	for(var i = 0; i < page3.length; i++){
 		page3[i].style.transform = 'rotateY(' + page3_angle + 'deg) translateZ(' + (w/2) + 'px)';
 		page3_angle += 90;
@@ -68,9 +64,10 @@ function init_page3_indicator(){
 		page3_indicator.innerHTML += '<li>' + (i+1) + '</li>';
 	}		
 
-	page3_indicator_li = page3_indicator.querySelectorAll('li'); // 목록
+	page3_indicator_li = page3_indicator.querySelectorAll('li');
 	change_page3(page3_indicator_num);		
 }
+
 function change_page3(inum){
 	page3_indicator_li[inum-1].setAttribute('class', 'active');
 	yDeg = -90 * (inum - 1);
@@ -81,9 +78,10 @@ function change_page3(inum){
 	}
 	page3_indicator_li[inum - 1].setAttribute('class', 'active');			
 }
+	
 init_page3();
 init_page3_indicator();
-
+	
 for(var i = 0; i < page3_indicator_li.length; i++){
 	page3_indicator_li[i].addEventListener('click', function(){
 		page3_indicator_num = parseInt(this.innerText);
