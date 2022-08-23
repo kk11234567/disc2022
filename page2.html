@@ -13,4 +13,51 @@
     <h1>전공기초</h1>
   </div>
 
+
+  <div id="popup" onmouseover="showPopup();" onmouseout="hidePopup();">
+    <a id="popup_addr" style="font-family: 'Do Hyeon', sans-serif; font-size: 30; font-weight:bold; line-height:18px; color:#FFC000;" target="_blank">
+      <p id="popup_title" style="text-decoration:none; font-family: 'Do Hyeon', sans-serif; font-size: 30; font-weight:bold; line-height:18px;"></p>
+      <p id="popup_title2" style="text-decoration:none; font-family: 'Do Hyeon', sans-serif; font-size: 30; font-weight:bold; line-height:18px;"></p>
+      <p id="popup_title3" style="text-decoration:none; font-family: 'Do Hyeon', sans-serif; font-size: 30; font-weight:bold; line-height:18px;"></p>
+      <p id="popup_title4" style="text-decoration:none; font-family: 'Do Hyeon', sans-serif; font-size: 30; font-weight:bold; line-height:18px;"></p>
+      <p id="popup_title5" style="text-decoration:none; font-family: 'Do Hyeon', sans-serif; font-size: 30; font-weight:bold; line-height:18px;"></p>
+      <p id="popup_title6" style="text-decoration:none; font-family: 'Do Hyeon', sans-serif; font-size: 30; font-weight:bold; line-height:18px;"></p>
+    </a>
+  </div>
+  
+  <script>
+  // 마우스오버 상자 내용, 링크, 위치 변경
+  function changePopupText(title, title2, title3, title4, title5, title6, x, y) {
+    document.getElementById('popup_title').innerHTML = title;
+    document.getElementById('popup_title2').innerHTML = title2;
+    document.getElementById('popup_title3').innerHTML = title3;
+    document.getElementById('popup_title4').innerHTML = title4;
+    document.getElementById('popup_title5').innerHTML = title5;
+    document.getElementById('popup_title6').innerHTML = title6;
+
+    document.getElementById('popup').style.left = x + "px";
+    document.getElementById('popup').style.top = y + "px";
+    document.getElementById('popup').style.opacity = 1;
+
+  }
+  // 마우스오버 상자 숨기기
+  function hidePopup() {
+    document.getElementById('popup').style.opacity = 0;
+  }
+  // 마우스오버 상자 보이기
+  function showPopup() {
+    document.getElementById('popup').style.opacity = 1;
+  }
+  </script>
+  <div style="text-align:center;">
+    <img src="https://kk11234567.github.io/disc2022/value.jpg" usemap="#image-map">
+  </div>
+  <map name="image-map">
+    <area target="_blank" shape="poly" coords="400,27,404,76,730,76,728,30" onmouseover="changePopupText('성능','(Performance)','Or','기능','(Function)','',1100,230);" onmouseout="hidePopup();">
+    <area target="_blank" shape="poly" coords="15,422,13,486,290,496,282,433" onmouseover="changePopupText('ex)','용융 공정(Melting)','소결 공정(Sintering)','증착 공정(Deposition)','','',300,330)" onmouseout="hidePopup();">
+    <area target="_blank" shape="poly" coords="522,587,524,636,761,640,762,596" onmouseover="changePopupText('미시적구조','(Microscopic/crystal structure)','거시적구조','(Macroscopic/phase,shape)','','',1100,800)" onmouseout="hidePopup();">
+    <area target="_blank" shape="poly" coords="851,354,853,411,1117,416,1114,358" onmouseover="changePopupText('기계적 성질(Mechanical)','전기적 성질(Electrical)','자기적 성질(Magnetic)','열적 성질(Thermal)','광학적 성질(Optical)','열화적 성질(Deteroriate)',1130,630)" onmouseout="hidePopup();">
+  </map>
+
+
 </body></html>
