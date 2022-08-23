@@ -164,7 +164,17 @@ body{
   font-size: 10px;
 }
 /*전공기초페이지*/
-
+.page2_img_name{
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 20px;
+  color: white;
+  margin: 0 0 0 75;
+}
+.page2_value2 img{
+  display: block;
+  margin: 0 auto;
+  width: 1500; 
+}
 #popup{
   background-color: #1B52A2;
   position: absolute;
@@ -178,6 +188,33 @@ body{
   display: block;
   margin: 0 auto;
   height: 700;
+}
+.page2_value2_text{
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 18px;
+  color: white;
+  margin: 0 75 0 75;
+}
+.page2_why{
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 40px;
+  color: #FFC000;
+  margin: 0 75 0 75;
+}
+.page2_answer{
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 18px;
+  color: #FFC000;
+  margin: 0 75 0 75;
+}
+.page2_ex_title{
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 18px;
+  color: #CFEDB5;
+  margin: 0 75 0 75;
+}
+.page2_ex img{
+  margin: 0 75 0 75;
 }
 /*진로방향페이지*/
 .page3_container{
@@ -212,24 +249,20 @@ body{
   color: #1B52A2;
 	padding: 20px;
   font-family: 'Do Hyeon', sans-serif;
-  font-size: 50px;
+  font-size: 80px;
 }
 .page3_wrapper > .page3:nth-child(1){
-	background-image: url("https://kk11234567.github.io/disc2022/test.jpg");
+	background-image: url("https://kk11234567.github.io/disc2022/img_semi.jpg");
 	background-size: cover;
 }
 .page3_wrapper > .page3:nth-child(2){
-	background-image: url('https://kk11234567.github.io/disc2022/test.jpg');
+	background-image: url('https://kk11234567.github.io/disc2022/img_st.jpg');
 	background-size: cover;			
 }	
 .page3_wrapper > .page3:nth-child(3){
-	background-image: url('https://kk11234567.github.io/disc2022/test.jpg');
+	background-image: url('https://kk11234567.github.io/disc2022/img_bat.jpg');
 	background-size: cover;	
 }
-.page3_wrapper > .page3:nth-child(4){
-	background-image: url('https://kk11234567.github.io/disc2022/test.jpg');
-	background-size: cover;				
-}							
 
 #page3_indicator{ 
 	text-align: center; margin-top: 20px;
@@ -248,7 +281,6 @@ body{
 	cursor: pointer;
 }
 #page3_indicator li.active{ 
-	background-color: rgba(50%,50%,50%, 0.5);
 	color: red;
 }
 
