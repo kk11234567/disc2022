@@ -1,7 +1,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="author=" content="tailofmoon">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +16,102 @@
   <div class="head">
     <h1>진로방향</h1>
   </div>
-  <div class="tree">
-    <img alt="진로방향나무그림" src="https://kk11234567.github.io/disc2022/tree.jpg"></img>
-  </div>
+	<div class="page3_container">
+		<div class="page3_wrapper">
+			<div class="page3">
+				<h1>반도체</h1>
+			</div>
+			<div class="page3">
+				<h1>에너지</h1>
+			</div>
+			<div class="page3">
+				<h1>철강</h1>
+			</div>
+			<div class="page3">
+				<h1>배터리</h1>
+			</div>
+		</div>
+	</div>
+	<ul id=page3_indicator>
+	</ul>
 
-</body></html>
+<script>
+
+var page3_wrapper = document.querySelector('.page3_wrapper'),
+	page3 = document.querySelectorAll('.page3'),
+	page3_indicator = document.getElementById('page3_indicator'),
+	page3_indicator_li = page3_indicator.querySelectorAll('li');
+
+var yDeg = 0,
+	page3_indicator_num = 1,
+	page3_indicator_length = page3.length,
+	w = page3[0].offsetWidth,
+	page3_angle = 0,
+	page3_vector = 0;
+
+var hammer = new Hammer(page3_wrapper);
+
+function init_page3(){
+	w = page3[0].offsetWidth;
+
+
+	for(var i = 0; i < page3.length; i++){
+		page3[i].style.transform = 'rotateY(' + page3_angle + 'deg) translateZ(' + (w/2) + 'px)';
+		page3_angle += 90;
+	}
+
+	page3_wrapper.style.transform = 'translateZ(' + (-w/2) + 'px) rotateY(' + yDeg + 'deg)';
+}			
+
+function init_page3_indicator(){
+	for(var i = 0; i < page3_indicator_length; i++){
+		page3_indicator.innerHTML += '<li>' + (i+1) + '</li>';
+	}		
+
+	page3_indicator_li = page3_indicator.querySelectorAll('li'); // 목록
+	change_page3(page3_indicator_num);		
+}
+function change_page3(inum){
+	page3_indicator_li[inum-1].setAttribute('class', 'active');
+	yDeg = -90 * (inum - 1);
+	page3_wrapper.style.transform = 'translateZ(' + (-w/2) + 'px) rotateY(' + yDeg + 'deg)';
+
+	for(var i = 0; i < page3_indicator_li.length; i++){
+		page3_indicator_li[i].removeAttribute('class');
+	}
+	page3_indicator_li[inum - 1].setAttribute('class', 'active');			
+}
+init_page3();
+init_page3_indicator();
+
+for(var i = 0; i < page3_indicator_li.length; i++){
+	page3_indicator_li[i].addEventListener('click', function(){
+		page3_indicator_num = parseInt(this.innerText);
+		change_page3(page3_indicator_num);
+	});
+}
+
+hammer.on('swipeleft', function(e){
+	if(page3_indicator_num < page3_indicator_length){
+		page3_vector = 1;
+	} else page3_vector = 0;
+
+	page3_indicator_num += page3_vector;				
+	change_page3(page3_indicator_num);			
+});
+
+hammer.on('swiperight', function(e){
+	if(indicator_num > 1){
+		page3_vector = -1;
+	} else page3_vector = 0;
+
+	page3_indicator_num += page3_vector;				
+	change_page3(page3_indicator_num);			
+});
+
+window.onresize = function(){
+	init_page3();	
+}
+</script>
+</body>
+</html>
