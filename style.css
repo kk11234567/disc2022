@@ -128,10 +128,11 @@ body{
 .page1_body2{
   clear: both;
   width: 1500px;
-  height: 2100px;
+  height: 2200px;
   margin: 0 20 20 75;
   background-color: #D8E7EF;
-  position:absolute;
+  position: absolute;
+  z-index: -1;
 }
 .page1_body2_lectureintro{
   position: absolute;
@@ -141,14 +142,25 @@ body{
   font-family: 'Do Hyeon', sans-serif;
   font-size: 17px;
 }
-.page1_body2_lecture{
-  position: relative;
-  top: 120;
-  text-align: center;
+.page1_body2_lecture img{
+position: absolute;
+top: 1280;
+left: 130;
+  z-index:1;
+}
+#popup1{
+  background-color: white;
+  position: absolute;
+  opacity: 0;
+  border: 5px solid red;
+  padding: 5px 20px;
+  width: 500;
+  height: 340;
+  word-break: break-all;
 }
 .page1_body2_lecturelist{
   position: absolute;
-  top: 1480;
+  top: 1600;
   left: 140;
   color: #1B52A2;
   font-family: 'Do Hyeon', sans-serif;
@@ -156,7 +168,7 @@ body{
 }
 .page1_body2_lecture_choice{
   position: absolute;
-  top: 1580;
+  top: 1700;
   left: 140;
   right: 140;
   color: #1B52A2;
