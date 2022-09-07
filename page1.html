@@ -34,9 +34,43 @@
   <div class="page1_body2_lectureintro">
     <h1> 서울과기대 신소재공학과 전공필수 과목</h1>
   </div>
-  <div class="page1_body2_lecture">
-    <img src="https://kk11234567.github.io/disc2022/lecture.jpg"></img>
+  <div id="popup1" onmouseover="showPopup1();" onmouseout="hidePopup1();">
+    <a id="popup1_addr" style="font-family: 'Do Hyeon', sans-serif; font-size: 25; line-height:40px; color:#1B52A2;" target="_blank">
+      <p id="popup1_title" style="text-decoration:none; font-family: 'Do Hyeon', sans-serif; font-size: 25; font-weight:bold; line-height:40px;"></p>
+    </a>
   </div>
+  <script>
+  // 마우스오버 상자 내용, 링크, 위치 변경
+  function changePopupText1(title, x, y) {
+    document.getElementById('popup1_title').innerHTML = title;
+
+    document.getElementById('popup1').style.left = x + "px";
+    document.getElementById('popup1').style.top = y + "px";
+    document.getElementById('popup1').style.opacity = 1;
+
+  }
+  // 마우스오버 상자 숨기기
+  function hidePopup1() {
+    document.getElementById('popup1').style.opacity = 0;
+  }
+  // 마우스오버 상자 보이기
+  function showPopup1() {
+    document.getElementById('popup1').style.opacity = 1;
+  }
+  </script>
+  <div class="page1_body2_lecture">
+    <img src="https://kk11234567.github.io/disc2022/lecture2.jpg" usemap="#image-map1"></img>
+  </div>
+  <map name="image-map1">
+    <area target="_blank" shape="poly" coords="7,8,7,116,123,117,123,8" onmouseover="changePopupText1('신소재공학개론 : 금속재료 및 세라믹재료의 열역학적 거동 및 결정구조를 다루며, 이들 재료의 제조방법과 사용 환경에서의 조직변화와 기계적 및 기능적 특성변화에 관한 내용을 상세히 다룬다. 또한 복합재료, 자성재료, 반도체재료, 광학재료의 특성과 제조방법에 관하여 강의한다.',950,1280);" onmouseout="hidePopup1();">
+    <area target="_blank" shape="poly" coords="211,8,211,115,330,116,331,9" onmouseover="changePopupText1('결정학개론 : 결정 기하와 결정 화학의 기초를 주제로 하여 결정질 재료의 내부구조를 소개하는 것이 목적이다. 결정 기하에서는 결정축계와 축 변환에서부터 공간격자와 공간군까지를 설명하고 결정 화학에서는 화학결합을 소개하고 무기화합물의 구조를 설명함과 동시에 구조의 특성 및 상의 변화를 비교하여 설명한다.',950,1280);" onmouseout="hidePopup1();">
+    <area target="_blank" shape="poly" coords="419,7,419,118,535,117,536,8" onmouseover="changePopupText1('세라믹재료 : 세라믹 공정이 물성에 미치는 영향, 분말에서 소결까지 공정을 다루며, 세라믹 원료, 분말의 표면, 특성평가방법, 혼합, 첨가제, 분쇄, 성형, 건조 공정과 소결 및 그 제품의 물성에 대해 다룬다.',950,1280);" onmouseout="hidePopup1();">
+    <area target="_blank" shape="poly" coords="623,8,622,116,743,115,743,9" onmouseover="changePopupText1('재료열역학 : 열역학의 여러 법칙을 기초로 하여 1성분계의 상평형. 응축상의 반응, 용액의 성질, 2성분계의 상태도, 반응평형 등 열역학의 재료 공학적 응용에 대하여 강론한다.',950,1280);" onmouseout="hidePopup1();">
+    <area target="_blank" shape="poly" coords="6,156,5,265,124,264,123,156" onmouseover="changePopupText1('재료의전자기적성질 : 재료공학도가 갖추어야 할 물성론에 입각하여 전자기재료의 실용화에 관한 일반적인 지식을 습득하고 응용할 수 있도록 물성과 구조의 연관 관계에 따라 절연재료, 도전재료, 전자재료, 자성재료 등의 이론적인 고찰을 다룬다. 또한 각각의 재료별로 응용될 수 있는 소자의 특성 및 그 구동 원리를 다룬다.',950,1280);" onmouseout="hidePopup1();">
+    <area target="_blank" shape="poly" coords="211,156,210,266,330,263,331,159" onmouseover="changePopupText1('반도체재료 : 전자기의 고전적 이론, 도체 및 절연체와 전자기파/전기장의 상호작용, 자성재료, 초전도체, 기계적 성질, 반도체 소자의 작동원리, 양자물리의 배경, 박막 제조 및 리소그라피 공정, 에칭 공정 등에 관하여 다룬다.',950,1280);" onmouseout="hidePopup1();">
+    <area target="_blank" shape="poly" coords="417,158,418,261,533,262,534,158" onmouseover="changePopupText1('철강재료 : 철강 재료의 조직과 성질을 관련시켜 주철, 합금강, 기계 구조용강, 스테인레스강과 내열강, 특수용도강 등의 여러 가지 최신의 문제들에 대하여 강의한다.',950,1280);" onmouseout="hidePopup1();">
+    <area target="_blank" shape="poly" coords="624,157,623,264,741,262,741,157" onmouseover="changePopupText1('재료의기계적성질 : 재료의 기계적 성질을 이해하기 위한 응력 및 변형 상태, 단결정의 소성변형, 전위론을 소개하고, 이 이론들을 바탕으로 재료의 강화기구와 파괴를 설명한다. 또한 인장, 파괴, 피로, 크립 등 다양한 기계적 성질의 시험과 해석법을 공부한다.',950,1280);" onmouseout="hidePopup(1);">
+  </map>
   <div class="page1_body2_lecturelist">
     <h1> 서울과기대 신소재공학과 전공선택 과목</h1>
   </div>
